@@ -1,4 +1,9 @@
 <?php
+/**
+ * @copyright Copyright (c) 2018 denis909
+ * @license https://github.com/denis909/yii2-cascade-filesystem/blob/master/LICENSE
+ * @link http://denis909.spb.ru
+ */
 
 namespace denis909\yii;
 
