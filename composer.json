@@ -3,9 +3,9 @@
     "keywords": ["yii2", "autoload", "cascade", "filesystem"],
     "license": "MIT",
 	"autoload": {
-		"classmap": {
+		"classmap": [
 			"src\\CascadeFilesystemComponent.php"
-		}
+		]
 	},
     "require": {
         "yiisoft/yii2": ">=2.0.4"
