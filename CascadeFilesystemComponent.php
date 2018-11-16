@@ -6,12 +6,12 @@
  * @link http://denis909.spb.ru
  */
 
-namespace denis909\yii\components;
+namespace denis909\yii;
 
 use Yii;
 use yii\helpers\ArrayHelper;
 
-class CascadeFilesystem extends \yii\base\Component
+class CascadeFilesystemComponent extends \yii\base\Component
 {
 
 	public $pathMap = [];
