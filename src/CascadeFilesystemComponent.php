@@ -2,6 +2,7 @@
 /**
  * @copyright Copyright (c) 2018 denis909
  * @license https://github.com/denis909/yii2-cascade-filesystem/blob/master/LICENSE
+ * @author denis909
  * @link http://denis909.spb.ru
  */
 
@@ -12,18 +13,18 @@ use Yii;
 class CascadeFilesystemComponent extends \yii\base\Component
 {
 
-	public $aliases = [];
+	public $pathMap = [];
 
 	public function init()
 	{
 		parent::init();
 
-		spl_autoload_register(array($this, 'autoload'), true, false);
+		spl_autoload_register([$this, 'autoload'], true, false);
 	}
 
 	public function autoload($class)
 	{
-		foreach($this->aliases as $fromNamespace => $toNamespace)
+		foreach($this->pathMap as $fromNamespace => $toNamespace)
 		{
 			$segments = explode("\\", $class);
 
@@ -52,6 +53,6 @@ class CascadeFilesystemComponent extends \yii\base\Component
 		}
 
 		return false;
-	}	
+	}
 
 }
