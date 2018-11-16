@@ -9,6 +9,7 @@
 namespace denis909\yii\components;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 class CascadeFilesystem extends \yii\base\Component
 {
@@ -53,6 +54,26 @@ class CascadeFilesystem extends \yii\base\Component
 		}
 
 		return false;
+	}
+
+	public static function collectConfig(string $file, $aliases = null, array $return = [])
+	{
+		if ($aliases === null)
+		{
+			$aliases =  require Yii::getAlias('@common/config') . '/modules.php'; 
+		}
+
+		foreach($aliases as $key => $alias)
+		{
+			$filename = Yii::getAlias($alias) .'/' . $file . '.php';
+
+			if (is_file($filename))
+			{
+		    	$return = ArrayHelper::merge($return, require $filename);
+			}
+		}
+
+		return $return;
 	}
 
 }
