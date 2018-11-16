@@ -4,8 +4,7 @@
     "license": "MIT",
 	"autoload": {
 		"classmap": [
-			"CascadeFilesystemComponent.php",
-			"common/components/CascadeFilesystem.php"
+			"CascadeFilesystem.php"
 		]
 	},
     "require": {

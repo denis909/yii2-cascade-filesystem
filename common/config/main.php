@@ -6,7 +6,7 @@ return [
 	],
 	'components' => [
 		'cascadeFilesystem' => [
-			'class' => 'common\components\CascadeFilesystem',
+			'class' => 'denis909\yii\CascadeFilesystem',
 			'pathMap' => [
 			]
 		]

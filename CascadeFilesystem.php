@@ -11,7 +11,7 @@ namespace denis909\yii;
 use Yii;
 use yii\helpers\ArrayHelper;
 
-class CascadeFilesystemComponent extends \yii\base\Component
+class CascadeFilesystem
 {
 
 	public $pathMap = [];
@@ -56,8 +56,10 @@ class CascadeFilesystemComponent extends \yii\base\Component
 		return false;
 	}
 
-	public static function collectConfig(string $file, $aliases = null, array $return = [])
+	public static function collect(string $file, array $default = [], $aliases = null)
 	{
+		$return = [];
+
 		if ($aliases === null)
 		{
 			$aliases =  require Yii::getAlias('@common/config') . '/modules.php'; 
@@ -71,6 +73,11 @@ class CascadeFilesystemComponent extends \yii\base\Component
 			{
 		    	$return = ArrayHelper::merge($return, require $filename);
 			}
+		}
+
+		if ($default)
+		{
+			return ArrayHelper::merge($return, $default);
 		}
 
 		return $return;
