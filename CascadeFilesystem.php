@@ -11,7 +11,7 @@ namespace denis909\yii;
 use Yii;
 use yii\helpers\ArrayHelper;
 
-class CascadeFilesystem
+class CascadeFilesystem extends \yii\base\Component
 {
 
 	public $pathMap = [];
