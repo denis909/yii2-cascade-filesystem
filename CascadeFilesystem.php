@@ -58,7 +58,16 @@ class CascadeFilesystem
 
 	public static function collect(string $file, array $default = [], $aliases = null)
 	{
-		$return = [];
+		$filename = __DIR__ . '/' . $file . '.php';
+
+		if (is_file($filename))
+		{
+			$return = require $filename;
+		}
+		else
+		{
+			$return = [];
+		}
 
 		if ($aliases === null)
 		{
