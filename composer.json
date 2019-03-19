@@ -1,9 +1,10 @@
 {
     "name": "denis909/yii2-cascade-filesystem",
-    "keywords": ["yii2", "autoload"],
+    "keywords": ["yii2", "autoload", "loader", "filesystem", "cascade filesystem"],
     "license": "MIT",
 	"autoload": {
 		"classmap": [
+            "BaseCascadeFilesystem.php",
 			"CascadeFilesystem.php"
 		]
 	},
