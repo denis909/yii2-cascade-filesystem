@@ -13,6 +13,8 @@ use yii\helpers\ArrayHelper;
 abstract class BaseCascadeFilesystem extends \yii\base\Component
 {
 
+    public static $configFile = '@common/config/modules';
+
 	public $pathMap = [];
 
 	public function init()
@@ -59,7 +61,7 @@ abstract class BaseCascadeFilesystem extends \yii\base\Component
     {
         if ($aliases === null)
         {
-            $aliases = require Yii::getAlias($this->configFile)/* . '.php'*/; 
+            $aliases = require Yii::getAlias(static::$configFile)/* . '.php'*/; 
         }
 
         $return = [];

@@ -9,7 +9,4 @@ namespace denis909\yii;
 
 class CascadeFilesystem extends BaseCascadeFilesystem
 {
-
-    public $configFile = '@common/config/modules';
-
 }
