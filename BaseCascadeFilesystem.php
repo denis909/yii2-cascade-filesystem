@@ -13,7 +13,7 @@ use yii\helpers\ArrayHelper;
 abstract class BaseCascadeFilesystem extends \yii\base\Component
 {
 
-    public static $configFile = '@common/config/modules';
+    public static $configFile = '@common/config/modules.php';
 
 	public $pathMap = [];
 
