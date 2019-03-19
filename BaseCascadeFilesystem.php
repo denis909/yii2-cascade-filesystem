@@ -103,6 +103,8 @@ abstract class BaseCascadeFilesystem extends \yii\base\Component
     {
         $files = static::findFiles($file, $aliases);
 
+        $return = [];
+
         foreach($files as $filename)
         {
             $return = ArrayHelper::merge($return, require $filename);
