@@ -61,14 +61,14 @@ abstract class BaseCascadeFilesystem extends \yii\base\Component
     {
         if ($aliases === null)
         {
-            $aliases = require Yii::getAlias(static::$configFile)/* . '.php'*/; 
+            $aliases = require Yii::getAlias(static::$configFile); 
         }
 
         $return = [];
         
         foreach($aliases as $key => $alias)
         {
-            $filename = Yii::getAlias($alias) .'/' . $file/* . '.php'*/;
+            $filename = Yii::getAlias($alias) .'/' . $file;
 
             if (is_file($filename))
             {
@@ -115,7 +115,7 @@ abstract class BaseCascadeFilesystem extends \yii\base\Component
 
 	public static function mergeConfig(string $file, array $config = [], $aliases = null)
 	{
-		$filename = __DIR__ . '/' . $file/* . '.php'*/;
+		$filename = __DIR__ . '/' . $file;
 
 		if (is_file($filename))
 		{
