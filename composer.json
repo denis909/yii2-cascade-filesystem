@@ -1,14 +1,12 @@
 {
     "name": "denis909/yii2-cascade-filesystem",
-    "keywords": ["yii2", "autoload", "loader", "filesystem", "cascade filesystem"],
     "license": "MIT",
 	"autoload": {
-		"classmap": [
-            "BaseCascadeFilesystem.php",
-			"CascadeFilesystem.php"
-		]
-	},
-    "require": {
-        "yiisoft/yii2": ">=2.0.4"
-    }
+		"psr-4": {
+            "denis909\\yii\\": ""
+		},
+        "files": [
+            "bootstrap.php"
+        ]
+	}
 }
