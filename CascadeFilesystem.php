@@ -18,6 +18,14 @@ class CascadeFilesystem
         static::$pathMap[$path] = $alias; 
     }
 
+    public static function setAliases(array $aliases)
+    {
+        foreach($aliases as $alias => $path)
+        {
+            static::setAlias($alias, $path);
+        }
+    }
+
     public static function autoload($class)
     {
         foreach(static::$pathMap as $path => $alias)
