@@ -2,7 +2,7 @@
 /**
  * @license MIT
  * @author denis909
- * @link http://denis909.spb.ru
+ * @link https://denis909.spb.ru
  */
 namespace denis909\yii;
 

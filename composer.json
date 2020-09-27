@@ -1,12 +1,12 @@
 {
     "name": "denis909/yii2-cascade-filesystem",
     "license": "MIT",
-	"autoload": {
-		"psr-4": {
+    "autoload": {
+        "psr-4": {
             "denis909\\yii\\": ""
-		},
+        },
         "files": [
             "bootstrap.php"
         ]
-	}
+    }
 }
