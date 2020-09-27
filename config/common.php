@@ -10,7 +10,7 @@ return [
     ],
     'components' => [
         'cascadeFilesystem' => [
-            'class' => 'denis909\yii\CascadeFilesystem'
+            'class' => 'denis909\yii\CascadeFilesystemComponent'
         ]
     ]
 ];

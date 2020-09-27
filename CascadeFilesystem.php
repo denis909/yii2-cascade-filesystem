@@ -13,6 +13,10 @@ class CascadeFilesystem
 
     public static $pathMap = [];
 
+    protected function __construct()
+    {
+    }
+
     public static function setAlias($alias, $path)
     {
         static::$pathMap[$path] = $alias; 
